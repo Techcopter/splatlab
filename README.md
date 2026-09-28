@@ -155,16 +155,6 @@ projects/           your work (created on first run, not committed)
 brush/              the Brush trainer you download (not committed)
 ```
 
-## Credits
-
-Built on [three.js](https://threejs.org) (MIT),
-[PlayCanvas](https://github.com/playcanvas/engine) (MIT),
-[GSAP](https://gsap.com) (GreenSock standard no-charge licence),
-[FastAPI](https://fastapi.tiangolo.com),
-[Hugging Face Transformers](https://github.com/huggingface/transformers),
-[MoGe](https://github.com/microsoft/MoGe) and
-[Brush](https://github.com/ArthurBrussee/brush).
-
 ## Licence
 
 The code in this repository is released under the [MIT licence](LICENSE). That
