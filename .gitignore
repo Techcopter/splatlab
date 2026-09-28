@@ -1,0 +1,43 @@
+# Secrets. The fal key lives here and must never reach the remote.
+.env
+*.key
+
+# Local settings (copy config.example.json to make one)
+config.json
+
+# Per-project working data: photos, control and AI videos, mattes, datasets,
+# trained splats, depth caches. Large, personal, and not source code.
+projects/
+
+# Brush itself: INSTALL.md says to put brush_app.exe here, and it is a ~160 MB
+# binary that belongs to its own project, not to this repository.
+brush/
+
+# Brush trainer autotune cache, regenerated at runtime
+target/
+
+# Local notes and backups that are not part of the tool
+_backup_*/
+
+# Python and editor noise
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.bak_*
+*.py.bak*
+*.js.bak*
+*.html.bak*
+
+# Model checkpoints are fetched on first use, never vendored
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.ply
+*.npz
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
