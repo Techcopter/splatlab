@@ -431,20 +431,16 @@ def upload(path: Path, on_log=None, role: str = "") -> str:
 
 # --------------------------------------------------------- auto-describe ---
 # fal-ai/any-llm/vision is deprecated; openrouter/router/vision is the current
-# vision endpoint and fronts Gemini / GPT / Claude / Qwen etc.
+# vision endpoint and fronts Gemini / GPT / Qwen etc.
 VISION_ENDPOINT = "openrouter/router/vision"
 # Every one of these must accept IMAGE input -- this endpoint is handed a
 # picture, and a text-only model returns a confident description of nothing.
-# The two Claude 5 ids were checked against OpenRouter's own endpoint listing
-# rather than guessed from the naming pattern; both report
-# input_modalities ["text", "image", "file"].
+# Check any id you add against OpenRouter's own endpoint listing rather than
+# guessing from the naming pattern: it must report "image" in input_modalities.
 VISION_MODELS = [
     "google/gemini-2.5-flash",          # cheap, fast, good at materials
     "google/gemini-2.0-flash-001",
     "openai/gpt-4o-mini",
-    "anthropic/claude-3.5-haiku",
-    "anthropic/claude-sonnet-5",        # stronger on materials and lighting
-    "anthropic/claude-opus-5",          # strongest, and the dearest per call
 ]
 
 # The boilerplate in build_prompt() already owns motion, backdrop and framing.
